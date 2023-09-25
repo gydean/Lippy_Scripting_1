@@ -1,0 +1,48 @@
+# 9/20/23
+# going to make rock/paper/scissors
+
+
+from random import choice
+possible = ['r', 'p', 's']
+play_again = "y"
+
+while play_again == "y":
+    computer_action = choice(possible)
+    player_action = str(input("Let's play RPS! Please enter an r, p, or s: "))
+    print("Computer: " + computer_action)
+
+    if player_action == computer_action:
+        print("It's a tie!")
+
+# r vs p
+
+    if player_action == "r" and computer_action == "p":
+        print("Computer wins!")
+
+    if player_action == "p" and computer_action == "r":
+        print("Player wins!")
+
+# s vs r
+    if player_action == "s" and computer_action == "r":
+        print("Computer wins!")
+
+    if player_action == "r" and computer_action == "s":
+        print("Player wins!")
+
+# p vs s
+    if player_action == "p" and computer_action == "s":
+        print("Computer wins!")
+
+    if player_action == "s" and computer_action == "p":
+        print("Player wins!")
+
+# invalid input
+    if player_action != "r" and player_action != "p" and player_action != "s":
+        print("Please enter a valid input.")
+
+# play again?
+    print("\nDo you want to play again? y/n \n")
+    if input() == "n":
+        exit()
+        
+# maybe figure out how to deal with input that's not y or n?
